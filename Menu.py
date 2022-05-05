@@ -26,7 +26,7 @@ class menu():
         va=float(input ("Ingrese el valor que desea comparar"))
         self.__li.opcion2(va)
     def opcion3(self):
-        self.__li.opcion3()
+        print (self.__li.opcion3())
     def opcion4(self):
         codigo=int(input ("Ingrese el codigo del vehiculo"))
         self.__li.opcion4(codigo)
