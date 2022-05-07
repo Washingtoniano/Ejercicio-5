@@ -15,7 +15,7 @@ class planAhorro():
     def modelo(self):
         return self.__modelo
     def cod(self):
-        return self.__codigo
+        return  (self.__codigo)
     def ver(self):
         return self.__version
     def modVa(self,nuevo):
@@ -26,7 +26,8 @@ class planAhorro():
         return ((va/ca)+va *0.10)
 
     def licitar (self):
-        return (self.__canCL * self.Calcular())
+        ca=int (self.__canCL)
+        return (self.Calcular()*ca)
     def ccuot(self,new):
         self.__canC=new
     def val(self):

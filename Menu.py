@@ -1,9 +1,7 @@
 from Lista import lista
 class menu():
-    __va=int
     __li=lista()
     def __init__(self):
-        self.__va=None
         self.__li=lista()
     def operador(self,op):
         self.__li.leer()
@@ -20,8 +18,7 @@ class menu():
         else:
             print ("Error")
     def opcion1(self):
-        val=float (input("Ingrese el valor actual del vehiculo\n "))
-        self.__li.opcion1(val)
+        self.__li.opcion1()
     def opcion2(self):
         va=float(input ("Ingrese el valor que desea comparar"))
         self.__li.opcion2(va)

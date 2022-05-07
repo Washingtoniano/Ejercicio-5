@@ -11,37 +11,35 @@ class lista():
             Plan=planAhorro(fila[0],fila[1],fila[2],fila[3],fila[4],fila[5])
             self.__indice.append(Plan)
         archivo.close()
-    def opcion1(self,va):
-        i =0
-        while self.__indice[i].val !=va and i<=len(self.__indice):
-            i=i+1
-        if i>(len(self.__indice)):
-            print ("No se encontro el  valor")
-        else:
-            print ("Codigo:{}-Modelo:{}-Version:{}\n".format (self.__indice[i].cod,self.__indice[i].modelo, self.__indice[i].ver))
-            nuevo= float(input("Ingrese el nuevo valor para el vehiculo\n"))
-            self.__indice[i].modVa(nuevo)
-    def opcion2(self,va):
+    def opcion1(self):
         i=0
         for plan in self.__indice:
-            ca=self.__indice[i].Calcular()
+            print(plan)
+        new=int(input("Ingrese el valor del vehiculo\t"))
+        while i<(len(self.__indice)) and (plan()!=new):
             i=i+1
+        if (i>=len(self.__indice)):
+            print ("Error")
+        else:
+            nuevo=(float(input("Ingrese el nuevo valor del vehiculo")))
+            plan.va=nuevo
+
+    def opcion2(self,va):
+        for plan in self.__indice:
+            ca=plan.Calcular()
             if (ca<va):
                 print (plan)
 
     def opcion3(self):
-        i=0
         for plan in (self.__indice):
             print (plan)
-            print ("Licitar:{}".format(self.__indice[i].licitar))
-            i=i+1
-
+            print ("Licitar:{}".format(plan.licitar()))
 
     def opcion4(self,codigo):
         i=0
-        while self.__indice[i].cod != codigo and i<=len(self.__indice):
+        while  i<len(self.__indice) and (self.__indice[i].cod)!= codigo:
             i=i+1
-        if i>  len(self.__indice):
+        if i>= len(self.__indice):
             print ("Codigo no encontrado\n")
         else:
             cuotas=int (input ("Ingrese la cantidad de cuotas"))
