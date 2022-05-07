@@ -16,7 +16,7 @@ class menu():
             self.opcion4()
         elif (op=='e'):
             self.opcion5()
-        else:
+        elif (op>'f' or type(op)!=str):
             print ("Error")
     def opcion1(self):
         self.__li.opcion1()
