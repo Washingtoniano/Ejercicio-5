@@ -3,8 +3,9 @@ class menu():
     __li=lista()
     def __init__(self):
         self.__li=lista()
-    def operador(self,op):
+    def iniciador(self):
         self.__li.leer()
+    def operador(self,op):
         if  (str.lower(op)=='a'):
             self.opcion1()
         elif (op=='b'):
@@ -25,8 +26,7 @@ class menu():
     def opcion3(self):
         print (self.__li.opcion3())
     def opcion4(self):
-        codigo=int(input ("Ingrese el codigo del vehiculo"))
-        self.__li.opcion4(codigo)
+        self.__li.opcion4()
     def opcion5(self):
         self.__li.opcion5()
 

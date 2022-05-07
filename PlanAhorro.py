@@ -15,7 +15,8 @@ class planAhorro():
     def modelo(self):
         return self.__modelo
     def cod(self):
-        return  (self.__codigo)
+        p=int(self.__codigo)
+        return p
     def ver(self):
         return self.__version
     def modVa(self,nuevo):
@@ -31,10 +32,11 @@ class planAhorro():
     def ccuot(self,new):
         self.__canC=new
     def val(self):
-        return self.__valor
+        v=float(self.__valor)
+        return v
     def cuot(self):
         return self.__canC
     def cant(self):
         return self.__canCL
     def __str__ (self):
-        return("Codigo:{}-Modelo:{}-Version:{}-Valor:${}-Cant.De Cuotas:{}-Cuotas p.Licitar:{}\n".format (self.__codigo,self.__modelo, self.__version,self.__valor,self.__canC,self.__canCL))
+        return("Codigo:{}-Modelo:{}-Version:{}-Valor:${}-Cant.De Cuotas:{}-Cuotas p.Licitar:{}-Valord/Cuota:{}\n".format (self.__codigo,self.__modelo, self.__version,self.__valor,self.__canC,self.__canCL,self.Calcular()))
